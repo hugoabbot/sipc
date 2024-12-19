@@ -1,0 +1,21 @@
+main() {
+    var i, j, k, n, result;
+    n = 1000;
+    result = 0;
+    i = 0;
+
+    while (i < n) {
+        j = 0;
+        while (j < n) {
+            k = 0;
+            while (k < n) {
+                result = result + (i * j * k); 
+                k++;
+            }
+            j++;
+        }
+        i++;
+    }
+
+    return result;
+}

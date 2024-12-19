@@ -1,0 +1,19 @@
+Loop Rotation Results
+
+Without optimization:
+drt3sm@portal08:~/sipc-abbot_lamb/bin$ ./build.sh ../test/optimization/lrp/lrp.tip 
+drt3sm@portal08:~/sipc-abbot_lamb/bin$ time ./lrp 10000
+Program output: 10000000
+
+real    0m0.123s
+user    0m0.112s
+sys     0m0.013s
+
+With optimization:
+drt3sm@portal08:~/sipc-abbot_lamb/bin$ ./build.sh --lrp ../test/optimization/lrp/lrp.tip 
+drt3sm@portal08:~/sipc-abbot_lamb/bin$ time ./lrp 10000
+Program output: 10000000
+
+real    0m0.068s
+user    0m0.057s
+sys     0m0.012s

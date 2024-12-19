@@ -1,0 +1,28 @@
+main() {
+    var a, b;
+    a = test1(100);
+    b = test2(200);
+    return 0;
+}
+
+test1(a) {
+    var b;
+    if (a == 10) {
+        b = a * a + a / 100;
+    }
+    else {
+        b = -13;
+    }
+    return b;
+}
+
+test2(a) {
+    var b;
+    if (a == 10) {
+        b = a * a + a / 100;
+    }
+    else {
+        b = -13;
+    }
+    return b;
+}

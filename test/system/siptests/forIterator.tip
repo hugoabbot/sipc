@@ -1,0 +1,24 @@
+forIteratorVarArray() {
+    var e, a, s;
+    a = [2, 4, 6, 8];
+    s = 0;
+    for (e : a) {
+        s = s + e;
+    }
+    return s;
+}
+
+forIteratorLitArray() {
+    var e, s;
+    s = 0;
+    for (e : [2, 4, 6, 8]) {
+        s = s + e;
+    }
+    return s;
+}
+
+main() {
+    if (forIteratorVarArray() != 20) error forIteratorVarArray();
+    if (forIteratorLitArray() != 20) error forIteratorLitArray();
+    return 0;
+}

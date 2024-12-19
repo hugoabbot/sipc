@@ -1,0 +1,19 @@
+Loop Unrolling Results
+
+Without optimization:
+drt3sm@portal11:~/sipc-abbot_lamb/bin$ ./build.sh ../test/optimization/lup/lup.tip
+drt3sm@portal08:~/sipc-abbot_lamb/bin$ time ./lup
+Program output: 124625374875000000
+
+real    0m3.372s
+user    0m3.365s
+sys     0m0.008s
+
+With optimization:
+drt3sm@portal11:~/sipc-abbot_lamb/bin$ ./build.sh --lup ../test/optimization/lup/lup.tip
+drt3sm@portal08:~/sipc-abbot_lamb/bin$ time ./lup
+Program output: 124625374875000000
+
+real    0m1.704s
+user    0m1.697s
+sys     0m0.007s

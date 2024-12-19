@@ -1,0 +1,64 @@
+itWithinIt() {
+    var a, b, i, j, s;
+    a = [1, 2, 3, 4];
+    b = [3 of 2];
+    s = 0;
+    for (i : a) {
+        s = s + i;
+        for (j : b) {
+            s = s + j;
+        }
+    }
+    return s;
+}
+
+itWithinRange() {
+    var b, i, j, s;
+    b = [3 of 2];
+    s = 0;
+    for (i : 1 .. 5) {
+        s = s + i;
+        for (j : b) {
+            s = s + j;
+        }
+    }
+    return s;
+}
+
+rangeWithinIt() {
+    var a, i, j, s;
+    a = [1, 2, 3, 4];
+    s = 0;
+    for (i : a) {
+        s = s + i;
+        for (j : 0 .. 3) {
+            s = s + 2;
+        }
+    }
+    return s;
+}
+
+rangeWithinRange() {
+    var i, j, s;
+    s = 0;
+    for (i : 1 .. 5) {
+        s = s + i;
+        for (j : 0 .. 3) {
+            s = s + 2;
+        }
+    }
+    return s;
+}
+
+main() {
+    var a, b, c, d;
+    a = itWithinIt();
+    if (a != 34) error a;
+    b = itWithinRange();
+    if (b != 34) error b;
+    c = rangeWithinIt();
+    if (c != 34) error c;
+    d = rangeWithinRange();
+    if (d != 34) error d;
+    return 0;
+}

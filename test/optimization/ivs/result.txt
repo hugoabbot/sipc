@@ -1,0 +1,19 @@
+Induction Variable Simplification Results
+
+Without optimization:
+drt3sm@portal08:~/sipc-abbot_lamb/bin$ ./build.sh ../test/optimization/ivs/ivs.tip
+drt3sm@portal08:~/sipc-abbot_lamb/bin$ time ./ivs 10000000
+Program output: 10000037
+
+real    0m0.056s
+user    0m0.051s
+sys     0m0.006s
+
+With optimization:
+drt3sm@portal08:~/sipc-abbot_lamb/bin$ ./build.sh --ivs ../test/optimization/ivs/ivs.tip
+drt3sm@portal08:~/sipc-abbot_lamb/bin$ time ./ivs 10000000
+Program output: 10000037
+
+real    0m0.014s
+user    0m0.005s
+sys     0m0.010s

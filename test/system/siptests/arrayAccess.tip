@@ -1,0 +1,45 @@
+refVarArray(i) {
+    var a;
+    a = [1, 2, 4, 8];
+    return a[i];
+}
+
+refLitArray(i) {
+    return [1, 2, 4, 8][i];
+}
+
+refParamArray(a, i) {
+    return a[i];
+}
+
+refVarArrayFixed(i) {
+    var a;
+    a = [5 of 7];
+    return a[i];
+}
+
+refLitArrayFixed(i) {
+    return [5 of 7][i];
+}
+
+main() {
+    var a, b, c, d;
+    if (refVarArray(0) != 1) error refVarArray(0);
+    if (refVarArray(3) != 8) error refVarArray(3);
+    if (refLitArray(0) != 1) error refLitArray(0);
+    if (refLitArray(3) != 8) error refLitArray(3);
+    a = [1, 3, 5, 7, 9];
+    if (refParamArray(a, 1) != 3) error refParamArray(a, 1);
+    if (refParamArray(a, 4) != 9) error refParamArray(a, 4);
+    if (refVarArrayFixed(0) != 7) error refVarArrayFixed(0);
+    if (refVarArrayFixed(4) != 7) error refVarArrayFixed(4);
+    b = [9 of 10];
+    if (refParamArray(b, 0) != 10) error refParamArray(b, 0);
+    if (refParamArray(b, 8) != 10) error refParamArray(b, 8);
+    c = [false, true, false, true];
+    if (c[0]) error 1;
+    if (not c[3]) error 0;
+    d = [5 of true];
+    if (not d[3]) error 0;
+    return 0;
+ }

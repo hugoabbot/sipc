@@ -1,0 +1,50 @@
+main(iters) {
+  var a, b, c, d, e, f, g, i, j, unused1, unused2, unused3, unused4;
+  a = 5;  
+  b = 10; 
+  c = 20; 
+  d = 0;  
+  e = 0;  
+  f = 50;
+  g = 75;
+  unused1 = 100; 
+  unused2 = 200; 
+  unused3 = 300; 
+  unused4 = 400; 
+  for (i : 0 .. iters) {
+    a = a + b; 
+    b = b * 2; 
+    unused1 = unused1 + c;
+    unused2 = unused2 - d; 
+    
+    if (b > 100) {
+      c = c + 10;
+      unused3 = unused3 * 2; 
+    } 
+    else {
+      d = d + 5;
+      unused4 = unused4 / 3; 
+    }
+
+    for (j : 0 .. 5) {
+      unused1 = unused1 + j;
+      unused2 = unused2 - j;
+      unused3 = unused3 * j;
+      unused4 = unused4 / (j + 1);
+    }
+
+    e = e + a + b + c + d;
+
+    if (f < g) {
+      f = f + 1; 
+    } 
+    else {
+      g = g - 1; 
+    }
+  }
+
+  e = e + d;
+  unused1 = unused1 + unused2 + unused3 + unused4;
+
+  return e;
+}

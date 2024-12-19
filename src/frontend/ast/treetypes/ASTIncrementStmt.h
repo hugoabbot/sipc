@@ -1,0 +1,20 @@
+#pragma once
+
+#include "ASTExpr.h"
+#include "ASTStmt.h"
+
+/*! \brief Class for increment statement.
+ */
+class ASTIncrementStmt : public ASTStmt {
+    std::shared_ptr<ASTExpr> BASE;
+
+public:
+    std::vector<std::shared_ptr<ASTNode>> getChildren() override;
+    ASTIncrementStmt(std::shared_ptr<ASTExpr> BASE) : BASE(BASE) {}
+    ASTExpr* getBase() const { return BASE.get(); }
+    void accept(ASTVisitor *visitor) override;
+    llvm::Value* codegen() override;
+
+protected:
+    std::ostream &print(std::ostream &out) const override;
+};

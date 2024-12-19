@@ -1,0 +1,19 @@
+Merge Function Pass Results
+
+Without optimization:
+drt3sm@portal10:~/sipc-abbot_lamb/bin$ ./build.sh ../test/optimization/mfp/mfp.tip
+drt3sm@portal10:~/sipc-abbot_lamb/bin$ time ./mfp
+Program output: 0
+
+real    0m0.011s
+user    0m0.009s
+sys     0m0.003s
+
+With optimization:
+drt3sm@portal10:~/sipc-abbot_lamb/bin$ ./build.sh --mfp ../test/optimization/mfp/mfp.tip
+drt3sm@portal10:~/sipc-abbot_lamb/bin$ time ./mfp
+Program output: 0
+
+real    0m0.014s
+user    0m0.003s
+sys     0m0.013s

@@ -1,0 +1,11 @@
+main(iters) {
+    var a, i, n;
+    a = 37;
+    i = 0;
+
+    while (i < iters) {
+        i++;
+    }
+
+    return a + i;
+}

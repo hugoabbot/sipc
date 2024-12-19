@@ -1,0 +1,25 @@
+main() {
+    var a, b, c, d, e;
+    a = [[1,2], [3,4]];
+    if (a[0][1] != 2) error a[0][1];
+    if (a[1][0] != 3) error a[1][0];
+    if (#a != 2) error #a;
+    b = [[3 of 4], [3 of 5]];
+    if (b[0][1] != 4) error b[0][1];
+    if (b[1][1] != 5) error b[1][1];
+    if (#b != 2) error #b;
+    c = [5 of [6 of 7]];
+    if (c[0][0] != 7) error c[0][0];
+    if (c[4][5] != 7) error c[4][5];
+    if (#c != 5) error #c;
+    d = [3 of [4, 5]];
+    if (d[0][0] != 4) error d[0][0];
+    if (d[2][1] != 5) error d[2][1];
+    if (#d != 3) error #d;
+    e = [3 of [3 of [true, false, false]]];
+    if (not e[0][0][0]) error 0;
+    if (e[2][2][2]) error 1;
+    if (#e != 3) error #e;
+
+    return 0;
+}

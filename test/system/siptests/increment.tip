@@ -1,0 +1,17 @@
+main () {
+    var x, y, z;
+    x = -1;
+    x++;
+    if (x != 0) error x;
+    y = x;
+    if (y != 0) error y;
+    y++;
+    if (y != 1) error y;
+    if (x != 0) error x;
+    z = 5;
+    while (z != 10) {
+        z++;
+    }
+    if (z != 10) error z;
+    return 0;
+}

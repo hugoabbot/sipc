@@ -1,0 +1,25 @@
+forRangeWithBy() {
+    var x, y, s;
+    y = 2;
+    s = 0;
+    for (x : y .. 10 by 2) {
+        s = s + x;
+    }
+    return s;
+}
+
+forRangeWithoutBy() {
+    var x, y, s;
+    y = 10;
+    s = 0;
+    for (x : 3 .. y) {
+        s = s + x;
+    }
+    return s;
+}
+
+main () {
+    if (forRangeWithBy() != 20) error forRangeWithBy();
+    if (forRangeWithoutBy() != 42) error forRangeWithoutBy();
+    return 0;
+}

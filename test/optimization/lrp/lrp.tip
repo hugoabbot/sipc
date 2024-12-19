@@ -1,0 +1,39 @@
+foo(x) {
+    var a, b, c, d, e, f, g;
+    a = 0;
+    b = 0;
+    d = 0;
+    e = 0;
+    f = 0;
+
+    while(c < 1000){
+        if (c == 10) {
+            c++;
+        }
+        c++;
+        a = 0;
+        while(a < 10){
+            a++;
+            b++;
+            if (true) {
+                a = a + b;
+            }
+            d = 0;
+        }
+    }
+
+    return c;
+}
+
+main(iters) {
+    var i, a;
+    i = 0;
+    a = 0;
+
+    while(i < iters){
+       a = a + foo(i);
+       i++;
+    }
+
+    return a;
+}

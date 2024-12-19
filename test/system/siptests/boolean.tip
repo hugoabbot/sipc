@@ -1,0 +1,18 @@
+main() {
+    var x, y, z, a, b;
+    x = true;
+    if (not x) error 0;
+    y = false;
+    if (y) error 1;
+
+    z = x and y;
+    if (z) error 1;
+    z = x or y;
+    if (not z) error 0;
+
+    a = not(y or true);
+    if (a) error 1;
+    b = not(false and x);
+    if (not b) error 0;
+    return 0;
+}

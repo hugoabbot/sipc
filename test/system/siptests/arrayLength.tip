@@ -1,0 +1,23 @@
+foo() {
+    return 1;
+}
+
+main() {
+    var x, y, z;
+    x = [];
+    y = #x;
+    if (y != 0) error y;
+    x = [20 of -45];
+    y = #x;
+    if (y != 20) error y;
+    y = #[1, 2];
+    if (y != 2) error y;
+    y = #[10 of foo()];
+    if (y != 10) error y;
+    y = #[];
+    if (y != 0) error y;
+    z = [true, false, true];
+    y = #z;
+    if (y != 3) error y;
+    return 0;
+}

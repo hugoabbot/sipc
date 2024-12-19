@@ -1,0 +1,24 @@
+main () {
+    var a, b, c, d, x;
+    a = 7;
+    b = 11;
+    c = 42;
+    d = -5;
+
+    x = c % b;
+    if (x != 9) error x;
+    x = 14 % a;
+    if (x != 0) error x;
+
+    if (not (d < a)) error 0;
+    if (a < d) error 1;
+
+    if (not (c >= d)) error 0;
+    if (d >= c) error 1;
+    if (not (d >= -5)) error 0;
+
+    if (not (a <= b)) error 0;
+    if (b <= a) error 1;
+    if (not (b <= 11)) error 0;
+    return 0;
+}
